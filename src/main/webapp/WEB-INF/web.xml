@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>Archetype Created Web Application</display-name>
+  <filter>
+    <filter-name>URL Filter</filter-name>
+    <filter-class>com.ailk.portal.common.filter.UrlFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>URL Filter</filter-name>
+    <url-pattern>/rest/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>Jersey Filter</filter-name>
+    <filter-class>com.sun.jersey.spi.container.servlet.ServletContainer</filter-class>
+    <init-param>
+      <param-name>com.sun.jersey.config.property.packages</param-name>
+      <param-value>com.ailk</param-value>
+    </init-param>
+    <init-param>
+      <param-name>com.sun.jersey.config.feature.ImplicitViewables</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>Jersey Filter</filter-name>
+    <url-pattern>/rest/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>ServletParamIniter</servlet-name>
+    <servlet-class>com.ailk.util.common.servlet.ServletParamIniter</servlet-class>
+    <init-param>
+      <param-name>startParamValue</param-name>
+      <param-value>apiParamRule,param,bcApiRela,bcApi</param-value>
+    </init-param>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+</web-app>
