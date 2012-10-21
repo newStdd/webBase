@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class lgnCtlr {
+public class ControlLogin {
 	@RequestMapping(value="/lgn",method=RequestMethod.GET)
 	public String lgn(HttpServletRequest AHttpServletRequest, HttpServletResponse AHttpServletResponse) throws ServletException, IOException {
 		AHttpServletRequest.getRequestDispatcher("idx.jsp").forward(AHttpServletRequest, AHttpServletResponse);
