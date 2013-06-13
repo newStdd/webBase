@@ -1,4 +1,4 @@
-package com.newStdd.login;
+package com.newStdd.springMvc;
 
 import java.io.IOException;
 
