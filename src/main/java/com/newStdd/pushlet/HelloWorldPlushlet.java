@@ -13,6 +13,7 @@ import nl.justobjects.pushlet.core.EventPullSource;
 	     public static class MySource1 extends EventPullSource {   
 	        @Override   
 	        protected long getSleepTime() {   
+	        		//单位毫秒
 	            return 1000;     
 	        }   
 	        @Override   
