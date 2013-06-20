@@ -53,11 +53,6 @@ public class LoginAction extends ActionSupport
          */
     }
     
-    public String init()
-    {
-    	return INPUT;
-    }    
-    
     @Override
     public String execute() throws Exception
     {

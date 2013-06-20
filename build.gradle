@@ -2,11 +2,11 @@ apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
 
-System.setProperty('http.proxyHost', 'proxy.asiainfo-linkage.com') 
-System.setProperty('http.proxyPort', '8080')
-System.setProperty('http.auth.ntlm.domain', 'ailk')
-System.setProperty('http.proxyUser', 'liulei2') 
-System.setProperty('http.proxyPassword', 'doul1979^') 
+System.setProperty('http.proxyHost', '127.0.0.1') 
+System.setProperty('http.proxyPort', '80')
+//System.setProperty('http.auth.ntlm.domain', 'ailk')
+//System.setProperty('http.proxyUser', 'liulei2') 
+//System.setProperty('http.proxyPassword', 'doul1979^') 
 System.setProperty('http.nonProxyHosts', '')
 
 repositories {
@@ -14,18 +14,18 @@ repositories {
 }
 
 dependencies { 
-	compile files('D://data/ecEe_4.2.2/javaBase/build/libs/javaBase.jar')
+	compile files('D://data/src/javaBase/build/libs/javaBase.jar')
 	compile fileTree(dir: 'lib', include: '*.jar')
 	compile 'org.springframework:spring-webmvc:3.1.2.RELEASE'  
 	compile 'javax.servlet:javax.servlet-api:3.0.1'
-	compile 'org.apache.struts:struts2-core:2.0.14'
+	compile 'org.apache.struts:struts2-spring-plugin:2.3.14.3'
 } 
 
 eclipse {
   wtp {
     facet {
       facet name: 'java', version: '1.7'
-      facet name: 'jst.web', version: '2.4'
+      facet name: 'jst.web', version: '3.0'
       facet name: 'wst.jsdt.web', version: '1.0'
 		}
 	}
