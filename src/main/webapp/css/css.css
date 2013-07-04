@@ -1,1 +1,30 @@
-body, html{height: 100%; margin: 0; overflow: hidden; width: 100%;}
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background-color: #EEEEEE;
+}
+
+#divContainer {
+	background-color: #FFFFFF;
+	margin: 0 auto;
+	width: 80%;
+	height: 100%;
+}
+
+.prompt {color: red;}
+/**
+	solid：实线
+	border对tr不起作用
+	border-collapse:边框合并 为collapse时合并
+**/
+.table {border:1px solid; border-collapse:collapse;}
+.table .th {border: 1px solid;}
+.table .td {border: 1px solid;}

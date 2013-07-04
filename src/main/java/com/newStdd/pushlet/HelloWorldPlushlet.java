@@ -19,7 +19,7 @@ import nl.justobjects.pushlet.core.EventPullSource;
 	        @Override   
 	        protected Event pullEvent() {   
 	            Event event =Event.createDataEvent("myevent1");   
-	            event.setField("sysDate",DateUtil.getDateString());   
+	            event.setField("sysDate",DateUtil.getSysDateString(DateUtil.dateFormatYyyy_MM_dd_HH_mm_ss));   
 	            return event;    
 	        }   
 	     }   

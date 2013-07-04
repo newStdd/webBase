@@ -3,25 +3,25 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<%@ include file="/common/head.jsp"%>
+		<%@ include file="/common/common.jsp"%>
     <script type="text/javascript" src="./js/ajax-pushlet-client.js"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=8261c4a00ba9e82d1a1a9b287cde69ea"></script>
+<!--     <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=8261c4a00ba9e82d1a1a9b287cde69ea"></script> -->
     <link type="text/css" rel="stylesheet" href="./css/test.css">
     <script type="text/javascript"> 
-	    PL.webRoot= '<%=basePath%>';
+	    PL.webRoot= '<%=fullPath%>';
 	    PL._init(); 
 	    PL.joinListen('myevent1'); 
 	    function onData(event) { 
 	    	var message= event.get('sysDate')+ '\n';
 	    	var textarea = $('#textarea_1').append(message);
 	    	textarea.scrollTop(textarea[0].scrollHeight - textarea.height());
-	    	var map = new BMap.Map("div_x2");
-	    	var point = new BMap.Point(116.400244,39.92556);
-	    	map.centerAndZoom(point, 12);	    	
-	    	var marker = new BMap.Marker(point);  // 创建标注
-	    	map.addOverlay(marker);              // 将标注添加到地图中
-	    	var label = new BMap.Label(message,{offset:new BMap.Size(20,-10)});
-	    	marker.setLabel(label);	    	
+// 	    	var map = new BMap.Map("div_x2");
+// 	    	var point = new BMap.Point(116.400244,39.92556);
+// 	    	map.centerAndZoom(point, 12);	    	
+// 	    	var marker = new BMap.Marker(point);  // 创建标注
+// 	    	map.addOverlay(marker);              // 将标注添加到地图中
+// 	    	var label = new BMap.Label(message,{offset:new BMap.Size(20,-10)});
+// 	    	marker.setLabel(label);	    	
 	    } 
     </script>
 <style type="text/css">
