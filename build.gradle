@@ -16,7 +16,7 @@ dependencies {
 	compile 'javax.servlet:javax.servlet-api:3.0.1'
 	compile 'org.apache.struts:struts2-spring-plugin:2.3.15'
 } 
-121
+
 eclipse {
   wtp {
     facet {
