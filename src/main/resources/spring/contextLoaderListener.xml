@@ -6,5 +6,5 @@
         <property name="loginService">
             <ref bean="loginService"/>
         </property>
-    </bean> 	
+    </bean>
 </beans>

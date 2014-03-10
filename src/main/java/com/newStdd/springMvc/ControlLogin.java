@@ -1,20 +1,17 @@
 package com.newStdd.springMvc;
 
-import java.io.IOException;
-
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.Controller;
 
-@Controller
-public class ControlLogin {
-	@RequestMapping(value="/login",method=RequestMethod.GET)
-	public String login(HttpServletRequest AHttpServletRequest, HttpServletResponse AHttpServletResponse) throws ServletException, IOException {
-//		AHttpServletRequest.getRequestDispatcher("login.jsp").forward(AHttpServletRequest, AHttpServletResponse);
-		return "login";
-	}
+public class ControlLogin implements Controller {
+	@Override  
+  public ModelAndView handleRequest(HttpServletRequest req, HttpServletResponse resp) throws Exception {  
+     ModelAndView mv = new ModelAndView();  
+     mv.addObject("message", "Hello World!");  
+     mv.setViewName("login");  
+     return mv;  
+  } 	
 }

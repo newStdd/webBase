@@ -4,7 +4,6 @@
 	<head>
 	</head>
 	<body>
-		springMvc Login</br>
-		message:${message}  
+		springMvc restfulLogin
 	</body>
 </html>
