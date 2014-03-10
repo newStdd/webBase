@@ -3,10 +3,11 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<%@ include file="/common/head.jsp"%>
+		<%@ include file="/common/common.jsp"%>
 	</head>
 	<body>
-	      <s:form name="login" action="login" method="post" >
+		<%@ include file="/jsp/header.jsp"%>
+	      <s:form name="login" action="login!login" method="post" >
           <s:textfield name="username" label="帐号"></s:textfield>
           <s:password name="password"  label="密码"></s:password>
           <s:submit></s:submit>

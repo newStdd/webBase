@@ -6,10 +6,10 @@
 		<action name="login" class="loginAction">
 			<exception-mapping result="usernameInvalid" exception="java.lang.Exception" />
 			<exception-mapping result="passwordInvalid" exception="java.lang.Exception" />
-			<result name="success">/struts/loginSuceess.jsp</result>
-			<result name="input">/struts/login.jsp</result>
-			<result name="usernameInvalid">/struts/userNameInvalid.jsp</result>
-			<result name="passwordInvalid">/struts/passwordInvalid.jsp</result>
+			<result name="success">/jsp/struts/loginSuceess.jsp</result>
+			<result name="input">/jsp/struts/login.jsp</result>
+			<result name="usernameInvalid">/jsp/struts/userNameInvalid.jsp</result>
+			<result name="passwordInvalid">/jsp/struts/passwordInvalid.jsp</result>
 		</action>
 	</package>
 </struts>

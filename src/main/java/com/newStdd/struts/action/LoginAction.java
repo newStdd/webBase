@@ -44,27 +44,13 @@ public class LoginAction extends ActionSupport
         this.password = password;
     }
     
-    
-    @Override
-    public void validate()
-    {
-        /*
-         * 我们可以在这个方法类加一些输入验证 但是为了体现后面我们写的业务逻辑方法这就不验证
-         */
-    }
-    
-    @Override
-    public String execute() throws Exception
+    public String init() throws Exception
     {
     	return INPUT;
-//        boolean result = loginService.validate(username, password);
-//        if(result == true)
-//        {
-//            return SUCCESS;
-//        }
-//        else
-//        {
-//            return INPUT;
-//        }
+    }
+    
+    public String login() throws Exception
+    {
+    	return SUCCESS;
     }
 }
