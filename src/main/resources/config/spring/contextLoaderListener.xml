@@ -3,7 +3,7 @@
 	<!--Root Context: defines shared resources visible to all other web components-->
 	<!--读取数据库配置-->
 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="locations" value="classpath:db_config.properties" />
+		<property name="locations" value="classpath:config/db/mysql.properties" />
 	</bean>
 	<!-- dbcp配置 -->
 	<bean id="MyDataSource" destroy-method="close" class="org.apache.commons.dbcp.BasicDataSource">
