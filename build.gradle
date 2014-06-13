@@ -6,12 +6,13 @@ apply plugin: 'eclipse-wtp'
 //System.setProperty('http.proxyPort', '80')
 
 configurations.all { 
-     // check for updates every build 
-     resolutionStrategy.cacheChangingModulesFor 0, 'seconds' 
+     //check for updates every build 
+	resolutionStrategy.cacheChangingModulesFor 0, 'seconds' 
 }
 
 repositories {
-	maven{ url "http://localhost:8081/nexus/content/groups/public/"  }
+	//maven{ url "http://localhost:8081/nexus/content/groups/public/"  }
+	mavenCentral()
 }
 
 dependencies { 
@@ -19,13 +20,17 @@ dependencies {
 	compile fileTree(dir: 'lib', include: '*.jar')
 	compile 'javax.servlet:javax.servlet-api:3.0.1'
 	compile 'org.apache.struts:struts2-spring-plugin:2.3.15'
-	compile 'org.springframework:spring-webmvc:3.1.2.RELEASE'
+	compile 'org.springframework:spring-webmvc:4.0.5.RELEASE'
 	compile 'org.mybatis:mybatis-spring:1.2.2'
+	compile 'org.springframework:spring-tx:4.0.5.RELEASE'
 } 
 
 [compileJava, javadoc, compileTestJava]*.options*.encoding = 'UTF-8'
 
 eclipse {
+    classpath {
+       downloadSources=false
+    }
   wtp {
     facet {
       facet name: 'java', version: '1.7'
@@ -34,3 +39,10 @@ eclipse {
 		}
 	}
 }
+/*
+idea {
+    module {
+        downloadJavadoc = false
+        downloadSources = false
+    }
+}*/

@@ -8,13 +8,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class RestfulControlLogin {
-	@RequestMapping(value="/restfulLogin",method=RequestMethod.GET)
-	public String login(HttpServletRequest AHttpServletRequest, HttpServletResponse AHttpServletResponse) throws ServletException, IOException {
+	@RequestMapping(value="/springMvc/restfulLogin",method=RequestMethod.GET)
+	public ModelAndView login(HttpServletRequest AHttpServletRequest, HttpServletResponse AHttpServletResponse) throws ServletException, IOException {
 //		AHttpServletRequest.getRequestDispatcher("login.jsp").forward(AHttpServletRequest, AHttpServletResponse);
-		return "restfulLogin";
+    ModelAndView mv = new ModelAndView();  
+    mv.addObject("message", "Hello World!");  
+    mv.setViewName("login");  
+    return mv;  
+		
 	}
 }

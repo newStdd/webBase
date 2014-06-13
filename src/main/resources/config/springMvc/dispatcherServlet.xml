@@ -12,7 +12,7 @@
 		<beans:property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>-->
 	</beans:bean>
 	<!--启动包扫描功能，注册带有@Controller、@Service、@repository、@Component、@Configuration的类为spring bean，包名可用逗号分隔-->
-	<context:component-scan base-package="com.newStdd"/>
+	<context:component-scan base-package="com.newStdd.springMvc"/>
 	<!--拦截器
 	<interceptors>
 		<beans:bean class="com.core.mvc.MyInteceptor"/>
